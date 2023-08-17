@@ -26,9 +26,26 @@ impl Instruction {
     }
 }
 
+#[derive(Debug)]
 struct CargoBay {
     number_of_stacks: u32,
-    stacks: Vec<Vec<String>>, 
+    stacks: Vec<Vec<String>>,
+}
+
+impl CargoBay {
+    fn new(number_of_stacks: u32) -> Self {
+        let mut stacks = Vec::new();
+        for _ in 0..number_of_stacks {
+            stacks.push(Vec::new());
+        }
+        CargoBay {
+            number_of_stacks: number_of_stacks,
+            stacks: stacks,
+        }
+    }
+
+    /*fn move_cargo(instruction: Instruction) {
+    }*/
 }
 
 fn main() {
@@ -65,4 +82,7 @@ fn main() {
     for row in cargo_rows {
         dbg!(row);
     }
+
+    let test = CargoBay::new(5);
+    dbg!(test);
 }
