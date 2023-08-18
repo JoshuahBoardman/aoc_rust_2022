@@ -1,14 +1,5 @@
 use std::str;
 
-//IDEA:
-//  Split the file by \n\n :check
-//  Convert each stack into a vec
-//  Split each instuction by " "
-//  filter the instuction vec inot only values that can be coerced into u16
-// (Maybe) put them into a sturct called instructiosn
-// Create a functions that can manipulate the stacks based on the instuctions
-// (Maybe) create a struct for the CargoBay
-
 #[derive(Debug)]
 struct Instruction {
     quantity: i32,
